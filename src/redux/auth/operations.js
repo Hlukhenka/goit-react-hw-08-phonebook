@@ -19,8 +19,6 @@ export const register = createAsyncThunk(
       setAuthToken(res.data.token);
       return res.data;
     } catch (error) {
-        console.error('Axios Error:', error);
-        console.error('Response Data:', error.response.data);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
